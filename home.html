@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css"
+      rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Work+Sans:wght@500&display=swap"
+      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap"
+      rel="stylesheet" />
+    <link rel="shortcut icon" type="x-icon" href="./assets/Chomerce.svg" />
+    <title>Chomerce</title>
+    <style>
+      :root {
+        --worksans: "Work Sans", sans-serif;
+        --opensans: "Open Sans", sans-serif;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+
+      .form-control {
+        margin-right: 100px;
+      }
+
+      #search {
+        width: 650px;
+      }
+
+      .navbar-brand {
+        margin-left: 107px;
+      }
+
+      .nav-signup-cart {
+        position: relative;
+        right: 45px;
+        top: 10px;
+        margin-right: 110px;
+      }
+
+      .search-icon {
+        margin-left: -460px;
+        top: 5px;
+      }
+
+      .cart-icon {
+        margin-bottom: 20px;
+        margin-left: 5px;
+      }
+
+      .menu {
+        margin-top: 160px;
+      }
+
+      .btn {
+        border-radius: 30px;
+        width: 70px;
+        height: 50px;
+        font-size: 24px;
+      }
+
+      .icon-card {
+        width: 84px;
+      }
+
+      .card {
+        max-width: 250px;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid;
+      }
+
+      .text-menu {
+        font-size: 14px;
+        font-family: var(--worksans);
+      }
+
+      /* .items1,
+      .items {
+        border: 1px solid black;
+      } */
+
+      .items1 {
+        position: relative;
+        top: -170px;
+        width: 1070px;
+        height: 353px;
+        margin-top: 160px;
+        text-align: start;
+      }
+
+      .items {
+        position: relative;
+        top: -170px;
+        width: 1070px;
+        height: 380px;
+        margin-top: 38px;
+        text-align: start;
+      }
+
+      .card-items {
+        gap: 25px;
+      }
+
+      .card-body p {
+        font-size: 11px !important;
+      }
+
+      .card-text {
+        text-align: start;
+        font-family: var(--opensans);
+      }
+
+      .card-btn {
+        border: 1.5px solid #f6a973;
+        background-color: #fff;
+        font-family: var(--worksans);
+      }
+
+      .card img {
+        width: 225px;
+        height: 225px;
+      }
+
+      .next-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+        color: #4d4d4d;
+        position: relative;
+        right: -1090px;
+        top: -210px;
+        background-color: #d9d9d9;
+        border-radius: 50%;
+      }
+
+      footer {
+        background-color: #000032;
+        color: white;
+      }
+
+      .link-footer ul li {
+        font-family: var(--worksans);
+        font-weight: 400;
+        font-size: 19px;
+      }
+
+      @media (max-width: 1400px) {
+        .menu {
+          margin-top: 180px;
+        }
+
+        .navbar-brand {
+          position: relative;
+          top: 5px;
+          margin-left: 20px;
+        }
+
+        #search,
+        .nav-signup-cart {
+          position: relative;
+          top: -35px;
+          right: -230px;
+        }
+
+        .nav-signup-cart {
+          right: -180px;
+          top: -25px;
+        }
+
+        .most-popular {
+          margin-left: -20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <navbar class="fixed-top" style="background-color: #fff">
+      <div class="container">
+        <nav class="navbar">
+          <div class="container-fluid">
+            <a class="navbar-brand d-flex"
+              ><img src="./assets/Chomerce.svg" alt="" id="logo"
+            /></a>
+            <div class="nav-search-signup-cart d-flex">
+              <form
+                class="d-flex form-control border-0"
+                id="search"
+                role="search">
+                <input
+                  type="email"
+                  class="form-control card-signin-input rounded-5 border-2 border-black align-items-center flex-shrink-0"
+                  id="exampleInputEmail1"
+                  placeholder="Search for anything" />
+                <a
+                  href=""
+                  class="search-icon position-relative start-50 text-dark"
+                  ><img src="./assets/Search.svg" alt=""
+                /></a>
+              </form>
+              <div class="nav-signup-cart d-flex">
+                <a
+                  href="./public/html/sign-in.html"
+                  style="
+                    color: #f6a973;
+                    width: 53px;
+                    height: 19px;
+                    font-size: 17px;
+                  ">
+                  Sign in
+                </a>
+                <a
+                  href=""
+                  class="d-flex position-relative cart-icon text-dark"
+                  style="left: 45px"
+                  ><img src="./assets/Cart.svg" alt=""
+                /></a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </navbar>
+
+    <div class="container">
+      <section class="menu">
+        <div
+          class="menu-icon d-flex"
+          style="gap: 26px; position: relative; top: -60px">
+          <div class="icon-card d-inline justify-content-center text-center">
+            <button
+              class="btn ri-camera-fill"
+              style="color: #2e54ff; background-color: #e3f5ff"></button>
+            <p class="text-menu mt-2">Camera</p>
+          </div>
+          <div class="icon-card d-inline justify-content-center text-center">
+            <button
+              class="btn ri-gamepad-fill"
+              style="color: #bde9c9; background-color: #f1fff2"></button>
+            <p class="text-menu mt-2">Console</p>
+          </div>
+          <div class="icon-card d-inline justify-content-center text-center">
+            <button
+              class="btn ri-cpu-fill"
+              style="color: #439f7e; background-color: #f1fff2"></button>
+            <p class="text-menu mt-2">CPU</p>
+          </div>
+          <div class="icon-card d-inline justify-content-center text-center">
+            <button
+              class="btn ri-smartphone-fill"
+              style="color: #ff9a9d; background-color: #ffe0e0"></button>
+            <p class="text-menu mt-2">Gadget</p>
+          </div>
+          <div class="icon-card d-inline justify-content-center text-center">
+            <button
+              class="btn ri-headphone-fill"
+              style="color: #461e0a; background-color: #f9e4d3"></button>
+            <p class="text-menu mt-2">Gadget Accessoris</p>
+          </div>
+          <div class="icon-card d-inline justify-content-center text-center">
+            <button
+              class="btn ri-hard-drive-2-fill"
+              style="color: #fb637e; background-color: #fbf2f4"></button>
+            <p class="text-menu mt-2">Harddisk</p>
+          </div>
+          <div class="icon-card d-inline justify-content-center text-center">
+            <button
+              class="btn ri-computer-fill"
+              style="color: #d6c8fc; background-color: #f8f1ff"></button>
+            <p class="text-menu mt-2">Monitor</p>
+          </div>
+          <div class="icon-card d-inline justify-content-center text-center">
+            <button
+              class="btn ri-mouse-fill"
+              style="color: #8cc8fa; background-color: #e3f5ff"></button>
+            <p class="text-menu mt-2">Mouse</p>
+          </div>
+          <div class="icon-card d-inline justify-content-center text-center">
+            <button
+              class="btn ri-tv-fill"
+              style="color: #f6a973; background-color: #fffaf5"></button>
+            <p class="text-menu mt-2">TV</p>
+          </div>
+          <div class="icon-card d-inline justify-content-center text-center">
+            <button
+              class="btn ri-router-fill"
+              style="color: #00249c; background-color: #f8f1ff"></button>
+            <p class="text-menu mt-2">Router</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="container">
+      <div class="warp-items">
+        <!-- items 1 -->
+        <section class="items1">
+          <div class="card-items d-flex">
+            <div class="card border-0" style="width: 18rem">
+              <img src="./assets/image 1.svg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <p class="card-text fw-semibold">
+                  PS4 OP Stick Bonus USB Charge Cable White
+                </p>
+                <button href="#" class="card-btn rounded-5 fw-bolder">
+                  $25.87
+                </button>
+              </div>
+            </div>
+            <div class="card border-0" style="width: 18rem">
+              <img src="./assets/image 2.svg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <p class="card-text fw-semibold">
+                  Hippo Ilo W2 Powerbank wireless 10000mah
+                </p>
+                <button href="#" class="card-btn rounded-5 fw-bolder">
+                  $32.50
+                </button>
+              </div>
+            </div>
+            <div class="card border-0" style="width: 18rem">
+              <img src="./assets/image 3.svg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <p class="card-text fw-semibold">
+                  ASUS ExpertBook B1400CEAE-EK3424T
+                </p>
+                <button href="#" class="card-btn rounded-5 fw-bolder">
+                  $527.66
+                </button>
+              </div>
+            </div>
+            <div class="card border-0" style="width: 18rem">
+              <img src="./assets/image 4.svg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <p class="card-text fw-semibold">SAMSUNG Galaxy A03</p>
+                <button href="#" class="card-btn rounded-5 fw-bolder">
+                  $118.60
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- items 2 -->
+
+        <section class="items">
+          <div class="card-items d-flex">
+            <div class="card border-0" style="width: 18rem">
+              <img src="./assets/image 5.svg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <p class="card-text fw-semibold">
+                  SAMSUNG 32 Inch TV LED UA32T4003
+                </p>
+                <button href="#" class="card-btn rounded-5 fw-bolder">
+                  $188.55
+                </button>
+              </div>
+            </div>
+            <div class="card border-0" style="width: 18rem">
+              <img src="./assets/image 6.svg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <p class="card-text fw-semibold">LOGITECH Pop Mouse</p>
+                <div class="discount d-flex align-items-start gap-3">
+                  <button href="#" class="card-btn rounded-5 fw-bolder d-flex">
+                    $24.29
+                    <p
+                      class="text-decoration-line-through text-body-tertiary position-relative"
+                      style="
+                        font-size: 10px !important;
+                        top: 6px;
+                        left: 5px;
+                        height: 0;
+                        margin-right: 10px;
+                      ">
+                      $24.98
+                    </p>
+                  </button>
+                  <p
+                    class="position-relative fw-semibold"
+                    style="
+                      top: 5px;
+                      color: #439f7e;
+                      font-size: 14px !important;
+                    ">
+                    disc.3%
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="card border-0" style="width: 18rem">
+              <img src="./assets/image 7.svg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <p class="card-text fw-semibold">
+                  ACER All-In-One Aspire C24-1650 (Core i3-1115G4, 4GB, 1TB HDD,
+                  Win 11 Home)
+                </p>
+                <div class="discount d-flex align-items-start gap-3">
+                  <button href="#" class="card-btn rounded-5 fw-bolder d-flex">
+                    $577.20
+                    <p
+                      class="text-decoration-line-through text-body-tertiary position-relative"
+                      style="
+                        font-size: 10px !important;
+                        top: 6px;
+                        left: 5px;
+                        height: 0;
+                        margin-right: 10px;
+                      ">
+                      $589.33
+                    </p>
+                  </button>
+                  <p
+                    class="position-relative fw-semibold"
+                    style="
+                      top: 5px;
+                      color: #439f7e;
+                      font-size: 14px !important;
+                    ">
+                    disc.2%
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="card border-0" style="width: 18rem">
+              <img src="./assets/image 8.svg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <p class="card-text fw-semibold">TP-LINK Archer AX73 Router</p>
+                <div class="discount d-flex align-items-start gap-3">
+                  <button href="#" class="card-btn rounded-5 fw-bolder d-flex">
+                    $116.61
+                    <p
+                      class="text-decoration-line-through text-body-tertiary position-relative"
+                      style="
+                        font-size: 10px !important;
+                        top: 6px;
+                        left: 5px;
+                        height: 0;
+                        margin-right: 10px;
+                      ">
+                      $140.86
+                    </p>
+                  </button>
+                  <p
+                    class="position-relative fw-semibold"
+                    style="
+                      top: 5px;
+                      color: #439f7e;
+                      font-size: 14px !important;
+                    ">
+                    disc.17%
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- items 3 -->
+
+    <section
+      class="items ms-0 w-100"
+      style="background-color: #f2f2f2; height: 515px; padding-top: 60px">
+      <div class="most-items d-flex" style="margin-left: 165px">
+        <div
+          class="most-popular text-center"
+          style="border-bottom: 4px solid #f6a973; width: 225px; height: 40px">
+          <a style="color: #f6a973" href="">Most popular items</a>
+        </div>
+        <div class="most-trending text-center" style="margin-left: 80px">
+          <a style="color: #b3b3b3" href="">Most trending items</a>
+        </div>
+      </div>
+      <div class="card-items d-flex" style="margin-left: 150px; width: 1070px">
+        <div
+          class="card border-0"
+          style="width: 18rem; background-color: #f2f2f2">
+          <img src="./assets/image 9.svg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <p
+              class="card-text fw-semibold"
+              style="margin-right: 150px; margin-top: -30px">
+              Realme C20
+            </p>
+            <div class="discount d-flex align-items-start gap-3">
+              <button href="#" class="card-btn rounded-5 fw-bolder d-flex">
+                $ 165
+                <p
+                  class="text-decoration-line-through text-body-tertiary position-relative"
+                  style="
+                    font-size: 10px !important;
+                    top: 6px;
+                    left: 5px;
+                    height: 0;
+                    margin-right: 10px;
+                  ">
+                  $175
+                </p>
+              </button>
+              <p
+                class="position-relative fw-semibold"
+                style="top: 5px; color: #439f7e; font-size: 14px !important">
+                disc.5%
+              </p>
+            </div>
+            <div class="rating d-flex gap-2 text-body-tertiary mt-3">
+              <img
+                style="width: 100px; height: 16px"
+                src="./assets/5 star.svg"
+                alt="" />
+              <p>(10,270)</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card border-0"
+          style="width: 18rem; background-color: #f2f2f2">
+          <img src="./assets/image 10.svg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <p class="card-text fw-semibold" style="margin-top: -30px">
+              Monitor 24'' IPS Full HD 4 Side Virtually Borderless Design
+            </p>
+            <div class="discount d-flex align-items-start gap-3">
+              <button href="#" class="card-btn rounded-5 fw-bolder d-flex">
+                $ 240
+                <p
+                  class="text-decoration-line-through text-body-tertiary position-relative"
+                  style="
+                    font-size: 10px !important;
+                    top: 6px;
+                    left: 5px;
+                    height: 0;
+                    margin-right: 10px;
+                  ">
+                  $265
+                </p>
+              </button>
+              <p
+                class="position-relative fw-semibold"
+                style="top: 5px; color: #439f7e; font-size: 14px !important">
+                disc.12%
+              </p>
+            </div>
+            <div class="rating d-flex gap-2 text-body-tertiary mt-3">
+              <img
+                style="width: 100px; height: 16px"
+                src="./assets/4 star.svg"
+                alt="" />
+              <p>(8,531)</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card border-0"
+          style="width: 18rem; background-color: #f2f2f2">
+          <img src="./assets/image 11.svg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <p class="card-text fw-semibold" style="margin-top: -30px">
+              External Case HDD 2.5" USB 2.0 / Casing Hardisk Eksternal 2.5 Inch
+            </p>
+            <div class="discount d-flex align-items-start gap-3">
+              <button href="#" class="card-btn rounded-5 fw-bolder d-flex">
+                $ 2
+              </button>
+              <p
+                class="position-relative fw-semibold"
+                style="top: 5px; color: #439f7e; font-size: 14px !important">
+                disc.12%
+              </p>
+            </div>
+            <div class="rating d-flex gap-2 text-body-tertiary mt-3">
+              <img
+                style="width: 100px; height: 16px"
+                src="./assets/4 star.svg"
+                alt="" />
+              <p>(1,232)</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card border-0"
+          style="width: 18rem; background-color: #f2f2f2">
+          <img src="./assets/image 12.svg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <p class="card-text fw-semibold" style="margin-top: -30px">
+              Seagate 2tb External Hard Drive
+            </p>
+            <div class="discount d-flex align-items-start gap-3">
+              <button href="#" class="card-btn rounded-5 fw-bolder d-flex">
+                $ 55.72
+                <p
+                  class="text-decoration-line-through text-body-tertiary position-relative"
+                  style="
+                    font-size: 10px !important;
+                    top: 6px;
+                    left: 5px;
+                    height: 0;
+                    margin-right: 10px;
+                  ">
+                  $65
+                </p>
+              </button>
+              <p
+                class="position-relative fw-semibold"
+                style="top: 5px; color: #439f7e; font-size: 14px !important">
+                disc.15%
+              </p>
+            </div>
+            <div class="rating d-flex gap-2 text-body-tertiary mt-3">
+              <img
+                style="width: 100px; height: 16px"
+                src="./assets/4 star.svg"
+                alt="" />
+              <p>(128)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- items 4 -->
+    <section class="items" style="margin-left: 178px">
+      <div class="card-items d-flex">
+        <div class="card border-0" style="width: 18rem">
+          <img src="./assets/image 13.svg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <p class="card-text fw-semibold" style="margin-right: 50px">
+              HDC 11 Promax 64Gb
+            </p>
+            <button href="#" class="card-btn rounded-5 fw-bolder">
+              $25.87
+            </button>
+          </div>
+        </div>
+        <div class="card border-0" style="width: 18rem">
+          <img src="./assets/image 14.svg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <p class="card-text fw-semibold">FUJIFILM Instax Mini 11 Camera</p>
+            <button href="#" class="card-btn rounded-5 fw-bolder">
+              $32.50
+            </button>
+          </div>
+        </div>
+        <div class="card border-0" style="width: 18rem">
+          <img src="./assets/image 15.svg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <p class="card-text fw-semibold">
+              SONY Alpha a7 III Mirrorless with FE 28-70mm Lens + microSD 128GB
+            </p>
+            <button href="#" class="card-btn rounded-5 fw-bolder">
+              $527.66
+            </button>
+          </div>
+        </div>
+        <div class="card border-0" style="width: 18rem">
+          <img src="./assets/image 16.svg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <p class="card-text fw-semibold">
+              HP Pavilion x360 Convertible 14-dy0063TU
+            </p>
+            <button href="#" class="card-btn rounded-5 fw-bolder">
+              $118.60
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="next-icon ri-arrow-right-line"></div>
+    </section>
+
+    <footer
+      class="bd-footer py-4 py-md-5 position-relative"
+      style="margin-top: -100px">
+      <div class="container py-4 py-md-5 px-4 px-md-3" style="color: #fff">
+        <div class="col d-flex" style="padding: 0 20px; margin-top: -40px">
+          <div
+            class="container col-lg-3 mb-3"
+            style="margin-left: 10px; display: inline">
+            <p style="font-size: 20px">APPLICATION</p>
+            <ul class="list-unstyled small" style="margin-left: 20px">
+              <li class="mb-2 position-relative" style="left: -12px">
+                <img src="./assets/google-play-badge 1.svg" alt="" />
+              </li>
+              <li class="mb-2 position-relative" style="left: -10px">
+                <img src="./assets/Appstore.svg" alt="" />
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="link-footer d-flex d-flex justify-content-center position-relative"
+            style="width: 710px; gap: 117px; margin-right: 200px; left: 25px">
+            <div class="link-footer"></div>
+            <div class="col-6 col-lg-2 offset text-start">
+              <h5>CHOMERCE</h5>
+              <ul class="list-unstyled">
+                <li class="mb-2"><a href="">Blog</a></li>
+                <li class="mb-2"><a href="">About us</a></li>
+                <li class="mb-2"><a href="">Site Map</a></li>
+                <li class="mb-2"><a href="">Karir</a></li>
+                <li class="mb-2"><a href="">Akun</a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-lg-2 text-start" style="width: 220px">
+              <h5>SERVICE INFORMATION</h5>
+              <ul class="list-unstyled">
+                <ul class="list-unstyled">
+                  <li class="mb-2"><a href="">Return of goods</a></li>
+                  <li class="mb-2"><a href="">Service and After Sales</a></li>
+                  <li class="mb-2"><a href="">Terms and conditions</a></li>
+                  <li class="mb-2"><a href="">Privacy Policy</a></li>
+                  <li class="mb-2"><a href="">Store Location</a></li>
+                </ul>
+              </ul>
+            </div>
+            <div class="col-6 col-lg-2 text-start" style="width: 225px">
+              <h5>
+                <i class="ri-customer-service-2-fill pe-2"></i>CUSTOMER SERVICE
+              </h5>
+              <ul class="list-unstyled">
+                <li class="mb-2 ri">
+                  <a href=""><i class="ri-phone-fill pe-2"></i>+84707707654</a>
+                </li>
+                <li class="mb-2">
+                  <a href=""><i class="ri-phone-fill pe-2"></i>+84808808700</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="copyright d-flex">
+          <img
+            style="margin-left: -70px"
+            src="./assets/Chomerce - logo.svg"
+            alt="" />
+          <p class="position-relative" style="left: 60px">
+            © 2022 All Rights Reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"></script>
+  </body>
+</html>
